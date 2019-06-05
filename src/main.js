@@ -48,16 +48,17 @@ const url='https://cors-anywhere.herokuapp.com/https://www.cangureo.es/deu.html?
 		'&link=' + link;
 Http.open("GET", url);
 Http.send();
-var respuesta = XMLHttpRequest.responseText;
+
 Http.onreadystatechange = (e) => {
   console.log(Http.responseText)
+  sdk.setContent('<p>' + Http.responseText + 'a</p>');
 }
 	
 	/**/
 	//var url = 'https://pub.s10.exacttarget.com/1r4ckkca1cs?mapskey=' + mapsKey +
 	//	'&link=' + link;
-	console.log('la respuesta' + respuesta);
-	sdk.setContent('<p>' + respuesta + 'a</p>');
+	
+	
 	sdk.setData({
 		address: address,
 		width: width,
