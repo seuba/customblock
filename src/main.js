@@ -3,7 +3,7 @@ require('../node_modules/@salesforce-ux/design-system/assets/styles/salesforce-l
 var SDK = require('blocksdk');
 var sdk = new SDK(null, null, true); // 3rd argument true bypassing https requirement: not prod worthy
 
-var address, width, height, zoom, link, mapsKey, price;
+var address, width, height, link, mapsKey, price;
 
 function debounce (func, wait, immediate) {
 	var timeout;
@@ -25,7 +25,7 @@ function paintSettings () {
 	
 	document.getElementById('slider-id-01').value = width;
 	document.getElementById('slider-id-02').value = height;
-	document.getElementById('slider-id-03').value = zoom;
+
 }
 
 function paintSliderValues () {
@@ -40,7 +40,7 @@ function paintMap() {
 	width = document.getElementById('slider-id-01').value;
 	console.log ('anchura' + width);
 	height = document.getElementById('slider-id-02').value;
-	zoom = document.getElementById('slider-id-03').value;
+	
 	link = document.getElementById('text-input-id-2').value;
 	
 	/**/
@@ -51,7 +51,7 @@ Http.send();
 
 Http.onreadystatechange = (e) => {
   console.log(Http.responseText)
-  sdk.setContent('<div style="width:' + width + ';height:' + height + ';background:#f3f3f3;border:2px solid #373737;border-radius:10px;text-align:center;padding:10px">' + Http.responseText + '</div>');
+  sdk.setContent('<div style="max-width:' + width + ';height:' + height + ';background:#f3f3f3;border:2px solid #373737;border-radius:10px;text-align:center;padding:10px">' + Http.responseText + '</div>');
 }
 	
 	/**/
@@ -62,7 +62,7 @@ Http.onreadystatechange = (e) => {
 		address: address,
 		width: width,
 		height: height,
-		zoom: zoom,
+		
 		link: link,
 		mapsKey: mapsKey,
 		price: price
@@ -74,7 +74,7 @@ sdk.getData(function (data) {
 	address = data.address || '';
 	
 	height = data.height || '';
-	zoom = data.zoom || 15;
+	
 	link = data.link || '';
 	mapsKey = data.mapsKey || '';
 	paintSettings();
