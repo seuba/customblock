@@ -69,15 +69,6 @@ Http.onreadystatechange = (e) => {
 	});
 	
 }
-function anchura(){
-	var slide, num;
-	
-	slide = document.getElementById('slider-id-01').value
-	num = document.getElementById('slider-id-01-val');
-	slide.onchange = function() {
-    num.innerHTML = this.value;
-}​
-}
 
 sdk.getData(function (data) {
 	address = data.address || '';
@@ -88,7 +79,6 @@ sdk.getData(function (data) {
 	mapsKey = data.mapsKey || '';
 	paintSettings();
 	paintSliderValues();
-	anchura();
 	paintMap();
 });
 
