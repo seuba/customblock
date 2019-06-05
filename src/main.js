@@ -22,7 +22,7 @@ function debounce (func, wait, immediate) {
 
 function paintSettings () {
 	document.getElementById('text-input-id-0').value = mapsKey;
-	document.getElementById('text-input-id-1').value = address;
+	
 	document.getElementById('slider-id-01').value = width;
 	document.getElementById('slider-id-02').value = height;
 	document.getElementById('slider-id-03').value = zoom;
@@ -36,7 +36,7 @@ function paintSliderValues () {
 
 function paintMap() {
 	mapsKey = document.getElementById('text-input-id-0').value;
-	address = document.getElementById('text-input-id-1').value;
+	
 	width = document.getElementById('slider-id-01').value;
 	height = document.getElementById('slider-id-02').value;
 	zoom = document.getElementById('slider-id-03').value;
