@@ -72,7 +72,7 @@ Http.onreadystatechange = (e) => {
 
 sdk.getData(function (data) {
 	address = data.address || '';
-	width = document.getElementById('slider-id-01').value;
+	
 	height = data.height || '';
 	zoom = data.zoom || 15;
 	link = data.link || '';
