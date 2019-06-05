@@ -44,19 +44,17 @@ function paintMap() {
 	
 	/**/
 	const Http = new XMLHttpRequest();
-const url='https://cors-anywhere.herokuapp.com/https://www.cangureo.es/deu.html?mapskey=' + mapsKey +
-		'&link=' + link;
+const url='https://cors-anywhere.herokuapp.com/https://pub.s10.exacttarget.com/1r4ckkca1cs?mapskey=' + mapsKey + '&link=' + link;
 Http.open("GET", url);
 Http.send();
 
 Http.onreadystatechange = (e) => {
   console.log(Http.responseText)
-  sdk.setContent('<div style="width:' + width + ';height:' + height + ';background:#f3f3f3;border:2px solid #373737;border-radius:10px">' + Http.responseText + '</div>');
+  sdk.setContent('<div style="width:' + width + ';height:' + height + ';background:#f3f3f3;border:2px solid #373737;border-radius:10px;text-align:center;padding:10px">' + Http.responseText + '</div>');
 }
 	
 	/**/
-	//var url = 'https://pub.s10.exacttarget.com/1r4ckkca1cs?mapskey=' + mapsKey +
-	//	'&link=' + link;
+	//var url = 'https://pub.s10.exacttarget.com/1r4ckkca1cs?mapskey=' + mapsKey + '&link=' + link;
 	
 	
 	sdk.setData({
