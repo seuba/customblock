@@ -38,6 +38,7 @@ function paintMap() {
 	mapsKey = document.getElementById('text-input-id-0').value;
 	
 	width = document.getElementById('slider-id-01').value;
+	console.log ('anchura' + width);
 	height = document.getElementById('slider-id-02').value;
 	zoom = document.getElementById('slider-id-03').value;
 	link = document.getElementById('text-input-id-2').value;
@@ -71,8 +72,8 @@ Http.onreadystatechange = (e) => {
 
 sdk.getData(function (data) {
 	address = data.address || '';
-	width = data.width || 400;
-	height = data.height || 300;
+	width = data.width || '';
+	height = data.height || '';
 	zoom = data.zoom || 15;
 	link = data.link || '';
 	mapsKey = data.mapsKey || '';
