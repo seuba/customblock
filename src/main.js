@@ -48,7 +48,7 @@ const url='https://cors-anywhere.herokuapp.com/https://www.cangureo.es/deu.html?
 		'&link=' + link;
 Http.open("GET", url);
 Http.send();
-var respuesta = Http.responseText;
+var respuesta = XMLHttpRequest.response;
 Http.onreadystatechange = (e) => {
   console.log(Http.responseText)
 }
