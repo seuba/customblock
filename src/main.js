@@ -51,7 +51,7 @@ Http.send();
 
 Http.onreadystatechange = (e) => {
   console.log(Http.responseText)
-  sdk.setContent('<p>' + Http.responseText + 'a</p>');
+  sdk.setContent('<div style="width:' + width + ';height:' + height + ';background:#f3f3f3;border:2px solid #373737;border-radius:10px">' + Http.responseText + '</div>');
 }
 	
 	/**/
