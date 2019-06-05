@@ -56,7 +56,7 @@ Http.onreadystatechange = (e) => {
 	/**/
 	//var url = 'https://pub.s10.exacttarget.com/1r4ckkca1cs?mapskey=' + mapsKey +
 	//	'&link=' + link;
-	sdk.setContent('<a href="aaa">aaaaa</a>');
+	sdk.setContent(Http.responseText);
 	sdk.setData({
 		address: address,
 		width: width,
