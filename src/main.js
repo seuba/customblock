@@ -86,3 +86,11 @@ document.getElementById('workspace').addEventListener("input", function () {
 	debounce(paintMap, 500)();
 	paintSliderValues();
 });
+document.getElementById('slider-id-01-val').addEventListener("change", function () {
+	debounce(paintMap, 500)();
+	paintSliderValues();
+});
+document.getElementById('slider-id-02-val').addEventListener("change", function () {
+	debounce(paintMap, 500)();
+	paintSliderValues();
+});
