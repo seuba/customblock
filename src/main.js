@@ -77,7 +77,7 @@ sdk.getData(function (data) {
 	height = data.height || 300;
 	zoom = data.zoom || 15;
 	link = data.link || '';
-	mapsKey = data.mapsKey;
+	mapsKey = data.mapsKey || '';
 	paintSettings();
 	paintSliderValues();
 	paintMap();
