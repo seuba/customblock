@@ -41,9 +41,7 @@ function paintMap() {
 	height = document.getElementById('slider-id-02').value;
 	zoom = document.getElementById('slider-id-03').value;
 	link = document.getElementById('text-input-id-2').value;
-	if (!address) {
-		return;
-	}
+	
 	/**/
 	const Http = new XMLHttpRequest();
 const url='https://pub.s10.exacttarget.com/1r4ckkca1cs?mapskey=' + mapsKey +
