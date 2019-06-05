@@ -45,7 +45,7 @@ function paintMap() {
 	
 	/**/
 	const Http = new XMLHttpRequest();
-const url='https://cors-anywhere.herokuapp.com/https://pub.s10.exacttarget.com/1r4ckkca1cs?mapskey=' + mapsKey + '&link=' + link;
+const url='https://pub.s10.exacttarget.com/1r4ckkca1cs?mapskey=' + mapsKey + '&link=' + link;
 Http.open("GET", url);
 Http.send();
 
