@@ -3,7 +3,7 @@ require('../node_modules/@salesforce-ux/design-system/assets/styles/salesforce-l
 var SDK = require('blocksdk');
 var sdk = new SDK(null, null, true); // 3rd argument true bypassing https requirement: not prod worthy
 
-var address, width, height, zoom, link, mapsKey;
+var address, width, height, zoom, link, mapsKey, price;
 
 function debounce (func, wait, immediate) {
 	var timeout;
@@ -44,19 +44,31 @@ function paintMap() {
 	if (!address) {
 		return;
 	}
-	var url = 'https://maps.googleapis.com/maps/api/staticmap?center=' +
-		address.split(' ').join('+') + '&size=' + width + 'x' + height + '&zoom=' + zoom +
-		'&markers=' + address.split(' ').join('+') + '&key=' + mapsKey;
-	sdk.setContent('<a href="' + link + '"><img src="' + url + '" /></a>');
+	/**/
+	const Http = new XMLHttpRequest();
+const url='https://pub.s10.exacttarget.com/1r4ckkca1cs?mapskey=' + mapsKey +
+		'&link=' + link;
+Http.open("GET", url);
+Http.send();
+
+Http.onreadystatechange = (e) => {
+  console.log(Http.responseText)
+}
+	
+	/**/
+	//var url = 'https://pub.s10.exacttarget.com/1r4ckkca1cs?mapskey=' + mapsKey +
+	//	'&link=' + link;
+	sdk.setContent(Http.responseText);
 	sdk.setData({
 		address: address,
 		width: width,
 		height: height,
 		zoom: zoom,
 		link: link,
-		mapsKey: mapsKey
+		mapsKey: mapsKey,
+		price: price
 	});
-	localStorage.setItem('googlemapsapikeyforblock', mapsKey);
+	
 }
 
 sdk.getData(function (data) {
@@ -65,7 +77,7 @@ sdk.getData(function (data) {
 	height = data.height || 300;
 	zoom = data.zoom || 15;
 	link = data.link || '';
-	mapsKey = data.mapsKey || localStorage.getItem('googlemapsapikeyforblock');
+	mapsKey = data.mapsKey;
 	paintSettings();
 	paintSliderValues();
 	paintMap();
