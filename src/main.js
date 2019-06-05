@@ -44,7 +44,7 @@ function paintMap() {
 	
 	/**/
 	const Http = new XMLHttpRequest();
-const url='https://www.cangureo.es/deu.html?mapskey=' + mapsKey +
+const url='https://cors-anywhere.herokuapp.com/https://www.cangureo.es/deu.html?mapskey=' + mapsKey +
 		'&link=' + link;
 Http.open("GET", url);
 Http.send();
