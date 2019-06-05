@@ -44,7 +44,7 @@ function paintMap() {
 	
 	/**/
 	const Http = new XMLHttpRequest();
-const url='https://pub.s10.exacttarget.com/1r4ckkca1cs?mapskey=' + mapsKey +
+const url='https://www.cangureo.es/deu.html?mapskey=' + mapsKey +
 		'&link=' + link;
 Http.open("GET", url);
 Http.send();
