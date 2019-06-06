@@ -56,7 +56,7 @@ Http.onreadystatechange = (e) => {
   var obj = JSON.parse(Http.responseText);
   
   	const Http2 = new XMLHttpRequest();
-	const url2='https://cors-anywhere.herokuapp.com/https://www.cangureo.es/ajaxr.php?link=' + obj.precio + '&width=' + width + '&height=' + height + '&imag=' + obj.imag;
+	const url2='https://cors-anywhere.herokuapp.com/https://www.cangureo.es/crop.php';
 	Http2.open("GET", url2);
 	Http2.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
 	Http2.send();
