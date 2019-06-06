@@ -83,7 +83,7 @@ Http.onreadystatechange = (e) => {
 
 sdk.getData(function (data) {
 	address = data.address || '';
-	
+	width = data.width || '';
 	height = data.height || '';
 	
 	link = data.link || '';
