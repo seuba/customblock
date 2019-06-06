@@ -81,7 +81,9 @@ sdk.getData(function (data) {
 	paintSliderValues();
 	paintMap();
 });
-
+sdk.getContent(function (content) {
+		debounce(paintMap, 500)();
+	});
 document.getElementById('workspace').addEventListener("input", function () {
 	debounce(paintMap, 500)();
 	paintSliderValues();
