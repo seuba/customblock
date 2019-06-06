@@ -48,6 +48,7 @@ function paintMap() {
 	const Http = new XMLHttpRequest();
 const url='https://cors-anywhere.herokuapp.com/https://pub.s10.exacttarget.com/1r4ckkca1cs?mapskey=' + mapsKey + '&link=' + link;
 Http.open("GET", url);
+	Http.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
 Http.send();
 
 Http.onreadystatechange = (e) => {
@@ -57,6 +58,7 @@ Http.onreadystatechange = (e) => {
   	const Http2 = new XMLHttpRequest();
 	const url2='https://cors-anywhere.herokuapp.com/https://www.cangureo.es/ajaxr.php?link=' + obj.precio + '&width=' + width + '&height=' + height + '&imag=' + obj.imag;
 	Http2.open("GET", url2);
+	Http2.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
 	Http2.send();
      Http2.onreadystatechange = (e) => {
   
