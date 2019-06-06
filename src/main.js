@@ -22,6 +22,7 @@ function debounce (func, wait, immediate) {
 
 function paintSettings () {
 	document.getElementById('text-input-id-0').value = mapsKey;
+	document.getElementById('text-input-id-2').value = link;
 	
 	document.getElementById('slider-id-01').value = width;
 	document.getElementById('slider-id-02').value = height;
