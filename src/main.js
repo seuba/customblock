@@ -54,7 +54,7 @@ Http.onreadystatechange = (e) => {
   console.log(Http.responseText)
   
   	const Http2 = new XMLHttpRequest();
-	const url2='https://www.cangureo.es/ajaxr.php';
+	const url2='https://www.cangureo.es/ajaxr.php?link=' + link;
 	Http2.open("GET", url2);
 	Http2.send();
      Http2.onreadystatechange = (e) => {
