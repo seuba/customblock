@@ -63,7 +63,7 @@ Http.onreadystatechange = (e) => {
      Http2.onreadystatechange = (e) => {
   
   
-  sdk.setContent('<a href='+ link +'><img width=' + width + '  height=' + height + ' src=' + url2 + '></a>');
+  sdk.setContent('<a href='+ obj.link +'><img width=' + width + '  height=' + height + ' src=' + url2 + '></a>');
 	 }
 }
 	
