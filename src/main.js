@@ -63,7 +63,7 @@ Http.onreadystatechange = (e) => {
      Http2.onreadystatechange = (e) => {
   
   
-  sdk.setContent('<img width=' + width + '  height=' + height + ' src=' + url2 + '>');
+  sdk.setContent('<a href='+ link +'><img width=' + width + '  height=' + height + ' src=' + url2 + '></a>');
 	 }
 }
 	
@@ -85,7 +85,7 @@ Http.onreadystatechange = (e) => {
 
 sdk.getData(function (data) {
 	address = data.address || '';
-	
+	width: data.width || '';
 	height = data.height || '';
 	
 	link = data.link || '';
