@@ -54,8 +54,8 @@ Http.onreadystatechange = (e) => {
   console.log(Http.responseText)
   var obj = JSON.parse(Http.responseText);
   
-  	const Http2 = new XMLHttpRequest();
-	const url2='https://cors-anywhere.herokuapp.com/https://www.cangureo.es/ajaxr.php?link=' + obj.precio + '&width=' + width + '&height=' + height;
+  	var Http2 = new XMLHttpRequest();
+	var url2='https://www.cangureo.es/ajaxr.php?link=' + obj.precio + '&width=' + width + '&height=' + height;
 	Http2.open("GET", url2);
 	
 	Http2.send();
