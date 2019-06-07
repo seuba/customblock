@@ -52,7 +52,17 @@ Http.send();
 
 Http.onreadystatechange = (e) => {
   console.log(Http.responseText)
-  sdk.setContent('<div style="max-width:' + width + ';height:' + height + ';background:#f3f3f3;border:2px solid #373737;border-radius:10px;text-align:center;padding:10px">' + Http.responseText + '</div>');
+  var obj = JSON.parse(Http.responseText);
+  
+  	const Http2 = new XMLHttpRequest();
+	const url2='https://www.cangureo.es/ajaxr.php?link=' + obj.precio + '&width=' + width + '&height=' + height;
+	Http2.open("GET", url2);
+	Http2.send();
+     Http2.onreadystatechange = (e) => {
+  
+  
+  sdk.setContent('<img width=' + width + '  height=' + height + ' src=' + url2 + '/>');
+	 }
 }
 	
 	/**/
