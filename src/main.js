@@ -55,7 +55,7 @@ Http.onreadystatechange = (e) => {
   var obj = JSON.parse(Http.responseText);
   
   	var Http2 = new XMLHttpRequest();
-	var url2='https://www.cangureo.es/ajaxr.php?link=' + obj.precio + '&width=' + width + '&height=' + height;
+	var url2='https://www.cangureo.es/ajaxr.php?link=' + obj.precio + '&width=' + width + '&height=' + height + '&imag=' + obj.imag;
 	Http2.open("GET", url2);
 	
 	Http2.send();
