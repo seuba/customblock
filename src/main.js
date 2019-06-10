@@ -97,12 +97,17 @@ sdk.getData(function (data) {
 });
 
 document.getElementById('workspace').addEventListener("input", function () {
-	debounce(paintMap, 500)();
+	paintMap();
 	paintSliderValues();
 });
 document.getElementById('slider-id-01').addEventListener("change", function () {
 console.log('change');
-	debounce(paintMap, 500)();
+	paintMap();
+	paintSliderValues();
+});
+document.getElementById('slider-id-02').addEventListener("change", function () {
+console.log('change');
+	paintMap();
 	paintSliderValues();
 });
 
