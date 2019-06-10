@@ -45,6 +45,7 @@ function paintMap() {
 	
 	link = document.getElementById('text-input-id-2').value;
 	console.log('el link es' + link);
+	if(link !=''){
 	/**/
 	const Http = new XMLHttpRequest();
 const url='https://cors-anywhere.herokuapp.com/https://pub.s10.exacttarget.com/1r4ckkca1cs?mapskey=' + mapsKey + '&link=' + link;
@@ -81,8 +82,10 @@ Http.onreadystatechange = (e) => {
 		mapsKey: mapsKey,
 		price: price
 	});
-	
-}
+	}else{
+		console.log('es blanc');
+	}
+} /**/
 
 sdk.getData(function (data) {
 	address = data.address || '';
