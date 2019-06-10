@@ -44,7 +44,7 @@ function paintMap() {
 	height = document.getElementById('slider-id-01').value;
 	
 	link = document.getElementById('text-input-id-2').value;
-	
+	console.log('el link es' + link);
 	/**/
 	const Http = new XMLHttpRequest();
 const url='https://cors-anywhere.herokuapp.com/https://pub.s10.exacttarget.com/1r4ckkca1cs?mapskey=' + mapsKey + '&link=' + link;
