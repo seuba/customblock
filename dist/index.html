@@ -59,8 +59,8 @@
 				</label>
 				<div class="slds-form-element__control">
 					<div class="slds-slider" style="display:none">
-						<input type="range" id="slider-id-02" class="slds-slider__range" step="5" value="500" min="400" max="600" />
-						<span class="slds-slider__value" id="slider-id-02-val" aria-hidden="true">200</span>
+						<input type="range" id="slider-id-02" class="slds-slider__range"  value="500" min="400" max="600" readonly/>
+						<span class="slds-slider__value" id="slider-id-02-val" aria-hidden="true">500</span><span>px</span>
 					</div>
 				</div>
 			</div>
@@ -75,6 +75,7 @@
 	<script>
 		function myFunction(myValue){
   document.getElementById("slider-id-01-val").innerHTML = myValue;
+  document.getElementById("slider-id-02-val").innerHTML = myValue;
 }
 	</script>
 	</body>
