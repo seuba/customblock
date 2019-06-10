@@ -41,7 +41,7 @@ function paintMap() {
 	
 	width = document.getElementById('slider-id-01').value;
 	console.log ('anchura' + width);
-	height = document.getElementById('slider-id-02').value;
+	height = document.getElementById('slider-id-01').value;
 	
 	link = document.getElementById('text-input-id-2').value;
 	
@@ -96,7 +96,7 @@ sdk.getData(function (data) {
 	paintMap();
 });
 
-document.getElementById('workspace').addEventListener("input", function () {
+document.getElementById('text-input-id-2').addEventListener("input", function () {
 	paintMap();
 	paintSliderValues();
 });
@@ -105,9 +105,5 @@ console.log('change');
 	paintMap();
 	paintSliderValues();
 });
-document.getElementById('slider-id-02').addEventListener("change", function () {
-console.log('change');
-	paintMap();
-	paintSliderValues();
-});
+
 
