@@ -105,7 +105,4 @@ console.log('change');
 	debounce(paintMap, 500)();
 	paintSliderValues();
 });
-document.getElementById('slider-id-02').addEventListener("change", function () {
-	debounce(paintMap, 500)();
-	paintSliderValues();
-});
+
