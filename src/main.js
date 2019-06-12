@@ -29,7 +29,12 @@ function paintSettings () {
 	document.getElementById('slider-id-02').value = height;
 
 }
-
+function myFunction(myValue){
+  document.getElementById("slider-id-01-val").innerHTML = myValue;
+  document.getElementById("slider-id-02-val").innerHTML = myValue;
+  document.getElementById("slider-id-02").value = myValue;
+}
+	
 function paintSliderValues () {
 	document.getElementById('slider-id-01-val').innerHTML = document.getElementById('slider-id-01').value;
 	document.getElementById('slider-id-02-val').innerHTML = document.getElementById('slider-id-02').value;
