@@ -78,13 +78,12 @@ Http.onreadystatechange = (e) => {
 	
 	
 	sdk.setData({
-		address: address,
+		
 		width: width,
 		height: height,
-		
 		link: link,
-		mapsKey: mapsKey,
-		price: price
+		mapsKey: mapsKey
+		
 	});
 	}else{
 		console.log('es blanc');
@@ -92,10 +91,9 @@ Http.onreadystatechange = (e) => {
 } /**/
 
 sdk.getData(function (data) {
-	address = data.address || '';
+	
 	width: data.width || '';
 	height = data.height || '';
-	
 	link = data.link || '';
 	mapsKey = data.mapsKey || '';
 	paintSettings();
