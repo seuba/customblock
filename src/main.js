@@ -108,7 +108,7 @@ document.getElementById('text-input-id-2').addEventListener("input", function ()
 });
 document.getElementById('slider-id-01').addEventListener("change", function () {
 console.log('change');
-	paintSettings();
+	
 	paintSliderValues();
 	paintMap();
 });
