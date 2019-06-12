@@ -55,7 +55,10 @@ Http.send();
 Http.onreadystatechange = (e) => {
   console.log(Http.responseText)
   var obj = JSON.parse(Http.responseText);
-  
+  if(obj.namec ==''){
+	  console.log('buit');
+  }
+  else{
   	var Http2 = new XMLHttpRequest();
 	var url2='https://www.cangureo.es/ajaxr.php?namec=' + obj.namec + '&width=' + width + '&height=' + height + '&imag=' + obj.imag+ '&start=' + obj.start+ '&end=' + obj.end;
 	
@@ -67,6 +70,7 @@ Http.onreadystatechange = (e) => {
   
   sdk.setContent('<a href='+ obj.link +'><img width=' + width + '  height=' + height + ' src=' + url2 + '></a>');
 	 }
+  }
 }
 	
 	/**/
